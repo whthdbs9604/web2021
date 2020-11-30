@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>css</title>
+	<style>
+		/*h3{color:brown;}*/
+		/*li{color:brown;}*/
+
+		h3,
+		li{color:brown;}
+		body.main{} /*바디에 한 칸 띄우지 말것, 자손으로 취급함*/
+		.warning{}
+
+		/*body>div>ul>li{} 4
+		body li{} 2 서로 같지만 값이 달라 인식은 위가 우선순위이다.*/
+
+		body li{} /*바디의 자손을 찾고싶을때는 한 칸 띄워줄 것 >는 바로 밑의 자손만 적용됨*/
+		a[href="http://www.naver.com"]{color:brown;}
+
+	/*	p>a:link{color:black;}
+		p>a:visited{color:black;}
+		p>a:active{color:red;}
+		p>a:hover{font-weight:bold;}
+		p>a:focus{color:blue;}
+		p>a{text-decoration:none;}*/
+
+		a:link,a:visited{color:black;text-decoration:none;}
+
+		/*ul.nav>li{}*/
+
+		/*body>div>ul.nav>li{}*/
+
+		/*.nav li{}*/
+		ul.nav>li{background-color:skyblue;}
+		ul.nav>li:first-child{background-color:blue;}
+		ul.nav>li:last-child{background-color:orange;}
+		ul.nav>li:nth-child(2){background-color:white;}
+
+	</style>
+</head>
+<body class="main">
+	<h3>Lorem, ipsum, dolor.</h3>
+	<hr>
+	<div>
+		<div>Lorem ipsum, dolor.</div>
+		<ul class="nav">
+			<li>html</li>
+			<li>css</li>
+			<li>javascript</li>
+		</ul>
+		<div class="warning">Lorem ipsum dolor sit amet.</div>
+	</div>
+	<p>
+		<!-- a[속성="속성값"] -->
+		<a href="http://www.naver.com" class="link">naver</a>
+		<a href="http://www.daum.net">daum</a>
+		<a href="http://www.gabia.com">gabia</a>
+	</p>
+	
+</body>
+</html>
