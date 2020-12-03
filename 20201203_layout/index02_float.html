@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>test</title>
+
+	<style>
+		/*reset*/
+		*{margin: 0;padding: 0;}
+		a:link,a:visited{color: #000;text-decoration:none;}
+		li{list-style:none;}
+		.clearfix:after{content:"";display:block;clear:both;}
+
+		/*header*/
+		header.header{width: 1000px;margin: 0 auto;background-color:skyblue;}
+		header.header>h1{text-align: center;}
+		header.header>nav.nav{}
+		header.header>nav.nav>ul{}
+		header.header>nav.nav>ul>li{width: 200px;height: 40px;float:left;background-color:pink;}
+		header.header>nav.nav>ul>li>a{display:block;text-align:center;line-height:40px;}
+
+		/*visual*/
+		div.visual{background-color: #ccc;height: 300px;line-height:300px;text-align:center;}
+
+		/*container*/
+		section.section{width: 1000px;margin: 0 auto;}
+		section.section>aside.aside{float:left;width: 30%;background-color:pink;}
+		section.section>div.content{height: 60%;background-color:skyblue;}
+
+	</style>
+
+</head>
+<body>
+
+	<header class="header">
+		<h1>logo</h1>
+	
+	<nav class="nav">
+		<ul class=clearfix>
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+	</nav>
+	</header>
+
+	<div class="visual">visual</div>
+	<section class="section clearfix">
+		<aside class="aside">aside</aside>
+		<div class="content">content</div>
+	</section>
+
+	<footer class="footer">footer</footer>
+	
+</body>
+</html>
