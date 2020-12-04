@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>position</title>
+	<link rel="stylesheet" href="css/reset.css">
+
+	<style>
+		body{background-image: url(../images/bg_grid.gif);}
+
+		/*div{width: 100px;height: 100px;}*/
+		.box1,.box2,.box3 {width: 100px;height: 100px}
+		.box1{background-color:pink; /*position: absolute;*/ }
+		.box2{background-color:olive;position: absolute;right: 0; top:300px;}
+		.box3{background-color:skyblue;}
+
+		div.box{width: 500px;height: 200px;background-color:gray;margin: 0 auto;position: relative;}
+	</style>
+</head>
+<body>
+	<div class="box">
+	<div class="box1">1</div>
+	<div class="box2">2</div>
+	<div class="box3">3</div>
+	</div>
+</body>
+</html>
