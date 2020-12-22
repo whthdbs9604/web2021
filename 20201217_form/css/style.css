@@ -22,6 +22,10 @@ legend, .blind{display: block;position: absolute; left:0;top:-9999px;}
 background-image: url(../images/ico_join3.png);
 background-repeat: no-repeat; text-indent:-9999px;}
 
+
+
+
+
 #content fieldset .field .icon.mail{background-position:0 -45px;}	
 #content fieldset .field .icon.pass{background-position:0 -466px;}
 #content fieldset .field .icon.pass2{background-position:0 -515px;}
