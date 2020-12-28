@@ -3,3 +3,15 @@
 a:link,a:visited{color: #000;text-decoration:none;}
 li{list-style:none;}
 .clearfix:after{content:"";display:block;clear:both;}
+
+
+.animation {
+  animation: pulse 1s linear both;
+}
+
+/* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */
+@media (prefers-reduced-motion) {
+  .animation {
+    animation-name: dissolve;
+  }
+}
