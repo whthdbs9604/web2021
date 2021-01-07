@@ -11,6 +11,7 @@
 	.tnav a.tgicn{display: block;}
 	.tnav a{display:none;}
 	.tnav a:first-child{display: block;}
+	
 	.tnav.rpsv a.tgicn{position: absolute;right: 0;top: 0;}
 	.tnav.rpsv a{float:none;display: block;}
 }

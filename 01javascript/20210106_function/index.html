@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>function</title>
+</head>
+<body>
+	<!-- <a href="#han">링크</a>
+	<div id="top">top</div>
+
+	<div>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Modi quibusdam velit, dolor maiores dicta reiciendis cumque quam, amet, nihil quo magnam aut provident officia. Praesentium assumenda excepturi quae possimus ipsam earum quis cum, at, ducimus incidunt nihil provident minima. Exercitationem impedit voluptate nam perferendis dignissimos, ipsam itaque eius quas doloribus? Minima, at nulla numquam laborum aspernatur corrupti tempore quisquam delectus suscipit. Quo distinctio, voluptatibus amet quidem voluptas assumenda officiis laboriosam similique tempora harum dolore placeat eius, provident autem ut repellendus dolor cumque corrupti minus libero doloribus perferendis quia aperiam architecto. Dolores facere pariatur, ullam soluta incidunt, sed accusamus iste recusandae?</div>
+	<div>Porro eligendi esse nisi commodi recusandae exercitationem non neque magnam totam minus, nemo tenetur. Esse, itaque eligendi. Minima, a ratione quasi aliquam autem nisi deleniti perspiciatis, maxime magni, numquam incidunt. Beatae a modi accusantium, facere, assumenda hic, necessitatibus minus illum dolor, cumque aspernatur incidunt. Natus minus corrupti numquam ea explicabo voluptas ad vero veniam sapiente pariatur sequi laudantium fuga obcaecati aspernatur quaerat eaque debitis nisi at aut vitae vel, accusamus, porro iure nemo. Similique distinctio ut accusamus neque accusantium, voluptatum. Illum ea dolore quod perferendis tempora non accusamus nemo nulla, officiis quasi. Ipsa odio quisquam beatae amet magni, fugiat a.</div>
+	<div id="han">Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Exercitationem delectus quod eum porro et quos maxime quibusdam nobis sit deleniti!</div>
+
+	<div style="height:500px;"></div>
+	<a href="#top">위로</a>
+	<a href="#" onclick="han()">연습</a>
+
+	<a href="javascript:void(0)">연습2</a>
+	<a href="#" onclick="return false">연습3</a>
+
+	<script>
+		function han(){
+			return false;
+		}
+	</script>
+
+
+
+ -->
+
+	<script>
+		
+		function printMsg(name,age){
+			// document.write("학생이름 :" + name +"<br>");
+			// document.write("나이 :" + age + " 살" +"<br>");
+
+			document.getElementById("sName").innerHTML = "학생이름 : " + name + " 나이는 " + age + " 살";
+		}
+
+		//printMsg("홍길동",20);
+
+		// $(document).ready(function(){
+
+		// });
+
+	</script>
+
+	<div id="sName"></div>
+
+	<button type="button" onclick="printMsg('홍길동',20)">학생정보</button>
+	<button type="button" onclick="printMsg('조소윤',26)">학생정보</button>
+
+	<br>
+
+	<div id="hap"></div>
+
+	<script>
+		var result;
+		function add(name,n){
+			document.write("<br>"+name+ "학생이 1부터 "+n+"까지 덧셈 수행 <br>");
+			var sum = 0;
+			for(var i=1;i<=n;i++){
+				// document.write(i);
+				sum = sum + i; // sum+=i;
+			}
+			// document.write(sum);
+			return sum;
+		}
+		result = add("홍길동",10);
+		document.write("결과" + result + "<br>");
+		document.getElementById("hap").innerHTML = result;
+
+		result = add("조소윤",100);
+		document.write("결과" + result + "<br>");
+		document.getElementById("hap").innerHTML = result;
+
+	</script>
+
+</body>
+</html>
