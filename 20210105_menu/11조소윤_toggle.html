@@ -19,10 +19,10 @@
 
 				if( toggle == "tg"){
 					$(".tg").addClass("chg");
-					$("#tmn").animate({left:0},300);			
+					$("#tmn").stop().animate({left:0},300);			
 				}else{
 					$(".tg").removeClass("chg");
-					$("#tmn").animate({left:"-100%"},300);
+					$("#tmn").stop().animate({left:"-100%"},300);
 				}
 			});
 		});
