@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+
+  <script>
+  var viewImg = [
+    "../jqrimg/spring.jpg",
+    "../jqrimg/summer.jpg",
+    "../jqrimg/fall.jpg",
+    "../jqrimg/winter.jpg"
+  ];
+    $(document).ready(function(){
+      $(".wrapper li").click(function(){
+       var num = $(this).index();
+       console.log(num);
+       $(".img img").attr("src",viewImg[num]); //attr("1") get.attr("1","2") set
+      });
+    });
+  </script>
+
+  <style>
+  .wrapper{width: 522px;margin: 0 auto;}
+  img{display: block;}
+  .wrapper li{float: left;width: 123px;margin-right: 10px;}
+  .wrapper li:last-child{margin-right:0;}
+  </style>
+
+</head>
+<body>
+
+  <div class="wrapper">
+    <ul class="clearfix">
+      <li><img src="../jqrimg/btn1_1.jpg" alt="봄"></li>
+      <li><img src="../jqrimg/btn2_1.jpg" alt="여름"></li>
+      <li><img src="../jqrimg/btn3_1.jpg" alt="가을"></li>
+      <li><img src="../jqrimg/btn4_1.jpg" alt="겨울"></li>
+    </ul>
+    <div class="img">
+      <img src="../jqrimg/spring.jpg" alt="봄">
+    </div>
+  </div>
+
+</body>
+</html>
