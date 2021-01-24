@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>modal</title>
+  <link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+
+  <script>
+    <!-- $(document).ready(function(){}); -->
+
+      $(function(){
+
+       $("body").append("<div id='glaylayer'></div><div id='overlayer'></div>")
+       // $("overlayer").html("<img src='../jqrimg/tourgallery_j1a.jpg'>");
+
+       $("a.modal").click(function(e){
+         e.preventDefault();
+         var ahref = $(this).attr("href");
+         console.log(ahref);
+         // return false;
+         $("#glaylayer").show();
+         $("#overlayer").show().html("<img src='"+ahref+"'>");
+       });
+       $("#glaylayer,#overlayer").click(function(){
+         $("#glaylayer,#overlayer").hide();
+       });
+    });
+  </script>
+
+  <style>
+    html,body{height: 100%;background: #d78585;}
+
+    .box{width: 100px;height: 100px;background: red;}
+
+    #glaylayer{position: fixed;width: 100%;height: 100%;background: #000; opacity: 0.3;left: 0;top: 0;display: none;}
+    #overlayer{position: fixed;background: skyblue; left: 50%; top: 50%; transform:translate(-50%,-50%);}
+
+    ul.layer{width: 470px;margin: 0 auto;}
+    ul.layer li{float: left;margin-right: 10px;width: 150px;margin-bottom:10px;}
+    ul.layer li:nth-child(3n){margin-right:0;}
+    ul.layer li img{display: block;}
+
+  </style>
+
+</head>
+<body>
+
+  <ul class="layer clearfix">
+
+    <li>
+    <a href="../jqrimg/tourgallery_j1a.jpg" class="modal">
+      <img src="../jqrimg/tourgallery_j1.jpg" alt="">
+    </a>
+    </li>
+
+    <li>
+    <a href="../jqrimg/tourgallery_j2a.jpg" class="modal">
+      <img src="../jqrimg/tourgallery_j2.jpg" alt="">
+    </a>
+    </li>
+
+    <li>
+    <a href="../jqrimg/tourgallery_j3a.jpg" class="modal">
+      <img src="../jqrimg/tourgallery_j3.jpg" alt="">
+    </a>
+    </li>
+    <li>
+    <a href="../jqrimg/tourgallery_j4a.jpg" class="modal">
+      <img src="../jqrimg/tourgallery_j4.jpg" alt="">
+    </a>
+    </li>
+    <li>
+    <a href="../jqrimg/tourgallery_j5a.jpg" class="modal">
+      <img src="../jqrimg/tourgallery_j5.jpg" alt="">
+    </a>
+    </li>
+    <li>
+    <a href="../jqrimg/tourgallery_j6a.jpg" class="modal">
+      <img src="../jqrimg/tourgallery_j6.jpg" alt="">
+    </a>
+    </li>
+  </ul>
+
+</body>
+</html>
