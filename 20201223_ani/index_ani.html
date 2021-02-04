@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>animation</title>
+
+	<style>
+		.box{width: 100px;height: 100px;background: orange;
+			/*animation-name:orange;*/
+			animation-duration:1s;
+			animation-fill-mode:forwards;
+			animation-iteration-count:infinite;
+			animation-direction:alternate;
+			animation-timing-function:ease;}
+
+			@keyframes orange{ from{width: 100px;height: 100px;} to{width: 200px;height: 200px;} }
+			.box:hover{animation-name:orange;}
+			.boxwrap{width:500px;height: 500px;background: skyblue;position: relative;cursor: pointer;}
+			.boxwrap .line1{width: 0px;height: 10px;background:blue;position: absolute;top:0;left: 0; 
+				
+				animation-duration:1s;
+				animation-fill-mode:forwards;}
+			.boxwrap .line2{width: 10px;height: 0px;background: blue;position: absolute;top:0;left: 0;
+				animation-duration: 1s;
+				animation-fill-mode:forwards;}
+
+			@keyframes line1{from{width: 0;} to{width: 500px;}}
+			@keyframes line2{from{height: 0;} to{height: 500px;}}
+			@keyframes line3{from{height: 0;} to{height: 500px;}}
+			@keyframes line4{from{width: 0;} to{width: 500px;}}
+
+			.boxwrap:hover .line1{animation-name:line1;}
+			.boxwrap:hover .line2{animation-name:line2;}
+			.boxwrap:hover .line3{animation-name:line3;}
+			.boxwrap:hover .line4{animation-name:line4;}
+
+
+			.boxwrap .line3{width: 10px;height: 0px;background: green;position: absolute;top:0;right:0;
+			animation-duration: 1s;
+				animation-fill-mode:forwards;}
+
+			.boxwrap .line4{width: 0px;height: 10px;background: green;position: absolute;bottom:0;left:0;
+			animation-duration: 1s;
+				animation-fill-mode:forwards;}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<div class="boxwrap">
+		<div class="line1"></div>
+		<div class="line2"></div>
+		<div class="line3"></div>
+		<div class="line4"></div>
+	</div>
+</body>
+</html>

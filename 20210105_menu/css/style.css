@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+
+.tnav{background: #333;}
+.tnav a{display: block;color: white;float: left;padding: 14px 16px;}
+.tnav a.tgicn{float: right;display:none;}
+
+@media screen and (max-width: 575px){
+	.mnwrap{position: fixed;width: 100%;}
+
+	.tnav a.tgicn{display: block;}
+	.tnav a{display:none;}
+	.tnav a:first-child{display: block;}
+	
+	.tnav.rpsv a.tgicn{position: absolute;right: 0;top: 0;}
+	.tnav.rpsv a{float:none;display: block;}
+}
+
+@media screen and (min-width: 576px) and (max-width:991px){
+	.mnwrap{width: 100%;}
+}
+
+@media screen and (min-width: 992px){
+	.mnwrap{width: 1200px; position:fixed;left: 50%;top:10px;transform:translateX(-50%);
+	}
+}

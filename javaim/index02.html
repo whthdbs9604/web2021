@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>company</title>
+
+	<link rel="stylesheet" href="../bxslider/css/jquery.bxslider.css">
+	<link rel="stylesheet" href="../bxslider/css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="../bxslider/js/jquery-3.1.1.min.js"></script>
+	<script src="../bxslider/js/jquery.bxSlider.js"></script>
+
+	<script>
+		$(document).ready(function(){
+
+			$(".slider").bxSlider();
+			$(".slider2nd").bxSlider({
+				controls:false,
+				pager:false
+			});
+
+			$(".tgmn").click(function(){
+				var toggle = $(".tgmn").attr("class");
+				console.log(toggle);
+				if(toggle == "tgmn"){
+					$(".tgmn").addClass("change");
+					$("#mimenu").stop().animate({left:0},300)
+				}else{
+					$(".tgmn").removeClass("change");
+					$("#mimenu").stop().animate({left:"-100%"},300)
+				}
+			});
+
+			$(window).resize(function(){
+				$(".tgmn").removeClass("change");
+				$("#mimenu").removeAttr("style");
+			});
+
+		});
+
+
+	</script>
+</head>
+<body>
+
+	<header id="miheader">
+		<div id="headert" class="clearfix">
+			<h1 class="logo"><a href="#">LOGO</a></h1>
+			<nav id="mimenu">
+				<ul>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+					<li><a href="#">menu</a></li>
+				</ul>
+			</nav>
+			<div class="tgmn">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</div>
+		<div class="sliderwrap">
+		<ul class="slider">
+			<li class="slider1st"> <!-- por -->
+				<!-- <img src="images/mainimg01.jpg" alt=""> -->
+				<div class="slidertxt">
+					<h3>Lorem, ipsum, dolor.</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Perferendis, impedit!</p>
+				</div>
+			</li>
+			<li class="slider2st"> <!-- por -->
+				<!-- <img src="images/mainimg01.jpg" alt=""> -->
+				<div class="slidertxt">
+					<h3>Lorem, ipsum, dolor.</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Perferendis, impedit!</p>
+				</div>
+			</li>
+			<li class="slider3st"> <!-- por -->
+				<!-- <img src="images/mainimg01.jpg" alt=""> -->
+				<div class="slidertxt">
+					<h3>Lorem, ipsum, dolor.</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing, elit. Perferendis, impedit!</p>
+				</div>
+			</li>
+			
+		</ul>
+		
+	</div>
+
+	<div class="content">
+		<ul class="clearfix">
+			<li class="ct1st">
+				<a href="#">
+					<img src="images/icon01_01.png" alt="뉴스레터신청">
+					<p>뉴스레터신청</p>
+				</a>
+			</li>
+
+			<li class="ct2st">
+				<a href="#">
+					<img src="images/img01_01.jpg" alt="영상" class="bgimg">
+					<img src="images/icon01_06.png" alt="실행" class="play">
+				</a>
+			</li>
+
+			<li class="ct3st">
+
+				<div class="sliderwrap">
+					<ul class="slider2nd">
+						<li class="news clearfix">
+							<div class="left">1Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, eum!</div>
+							<div class="right">
+								<img src="images/img01_02.jpg" alt="img">
+							</div>
+						</li>
+						<li class="news clearfix">
+							<div class="left">2Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, eum!</div>
+							<div class="right">
+								<img src="images/img01_02.jpg" alt="img">
+							</div>
+						</li>
+						<li class="news clearfix">
+							<div class="left">3Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, eum!</div>
+							<div class="right">
+								<img src="images/img01_02.jpg" alt="img">
+							</div>
+						</li>
+					</ul>
+					<h2>뉴스</h2>
+						<div class="btn clearfix">
+							<img src="images/btn01_01.jpg" alt="" class="prvbtn">
+							<img src="images/btn01_02.jpg" alt="" class="nxtbtn">
+						</div>
+				</div>
+			</li>
+
+			<li class="ct4st">
+				<a href="#">
+					<img src="images/icon01_02.png" alt="뉴스레터신청">
+					<p>뉴스레터신청</p>
+				</a>
+			</li>
+			<li class="ct5st">
+				<a href="#">
+					<img src="images/icon01_03.png" alt="뉴스레터신청">
+					<p>뉴스레터신청</p>
+				</a>
+			</li>
+			<li class="ct6st">
+				<a href="#">
+				<img src="images/img01_03.jpg" alt="전력 플랜트">
+				<div class="txt">
+					<h3>전력 및 에너지 플랜트</h3>
+					<p>세상을 밝히는<br>빛과 에너지</p>
+				</div>
+				</a>
+			</li>
+			<li class="ct7st">
+				<a href="#">
+				<img src="images/img01_06.jpg" alt="전력 플랜트">
+				<div class="txt">
+					<h3>전력 및 에너지 플랜트</h3>
+					<p>세상을 밝히는<br>빛과 에너지</p>
+				</div>
+				</a>
+			</li>
+			<li class="ct8st">
+				<a href="#">
+				<img src="images/img01_04.jpg" alt="전력 플랜트">
+				<div class="txt">
+					<h3>전력 및 에너지 플랜트</h3>
+					<p>세상을 밝히는<br>빛과 에너지</p>
+				</div>
+				</a>
+			</li>
+			<li class="ct9st">
+				<a href="#">
+					<img src="images/icon01_04.png" alt="뉴스레터신청">
+					<p>뉴스레터신청</p>
+				</a>
+			</li>
+			<li class="ct10st">
+				<a href="#">
+					<img src="images/icon01_05.png" alt="뉴스레터신청">
+					<p>뉴스레터신청</p>
+				</a>
+			</li>
+			<li class="ct11st">
+				<a href="#">
+				<img src="images/img01_05.jpg" alt="전력 플랜트">
+				<div class="txt">
+					<h3>전력 및 에너지 플랜트</h3>
+					<p>세상을 밝히는<br>빛과 에너지</p>
+				</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	</header>
+
+	<div class="container">
+		<div class="section">
+			<h4>비전</h4>
+			<p>VISION 2021</p>
+			<ul class="clearfix">
+				<li>
+					<div class="card">
+						<img src="images/banner_icon01_01.png" alt="엔지니어링">
+						<div class="cardbd">
+							<h3>Engineering</h3>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, officiis.</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card">
+						<img src="images/banner_icon01_02.png" alt="엔지니어링">
+						<div class="cardbd">
+							<h3>Engineering</h3>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, officiis.</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card">
+						<img src="images/banner_icon01_03.png" alt="엔지니어링">
+						<div class="cardbd">
+							<h3>Engineering</h3>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, officiis.</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card">
+						<img src="images/banner_icon01_04.png" alt="엔지니어링">
+						<div class="cardbd">
+							<h3>Engineering</h3>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, officiis.</p>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class="bottomwrap">
+		<div class="snswrap">
+			<ul class="clearfix">
+				<li>1</li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">6</a></li>
+				<li><a href="#">7</a></li>
+			</ul>
+		</div>
+		<div class="impo">
+			<ul class="clearfix">
+				<li><img src="" alt="">1</li>
+				<li><img src="" alt="">2</li>
+			</ul>
+		</div>
+	</div>
+	<footer>
+		
+		<div class="footer">
+			<h2>logo</h2>
+			<ul class="clearfix">
+				<li><a href="#">회사소개</a></li>
+				<li><a href="#">개인정보처리방침</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">고객센터</a></li>
+				<li><a href="#">상담문의</a></li>
+				<li><a href="#">사이트맵</a></li>
+				<div class="txt">
+				<p>(12345) 서울특별시 강남구 강남북로 1234 강남타워 22층 대표이사 : 홍길동</p>
+				<p>사업자등록번호 : 123-45-33456 통신판매업신고번호 : 제 2020-2020202호 개인정보 보호 책임자 : 홍길동 (admin@company.com)</p>
+				<p>COPYRIGHT (C) 2020 BY COMPANY ALL RIGHT RESERVED.</p>
+			</div>
+			</ul>
+		</div>
+		
+	</footer>
+	
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<p id="fstp" style="color:blue;background:olive;" onclick="this.style.color='white'">
+		이것은 <span style="color:red"> 문장입니다. </span>
+	</p>
+	<button onclick="change()">스타일 변경</button>
+
+	<script>
+		var p = document.getElementById("fstp");
+		var txt = "p.id" + p.id + "\n";
+		txt += "태그네임 : " + p.tagName + "\n"; //txt = txt + p.tagname
+		txt += "내용물 : " + p.innerHTML + "\n";
+		txt += "자식요소 개수 : " + p.childElementCount + "\n";
+		txt += "이벤트 : " + p.onclick + "\n";
+
+		//document.getElementById("fstp").innerHTML = "안녕하세요"; // set
+		//document.getElementById("fstp").innerHTML; // get
+
+
+		console.log(txt);
+
+		//document.getElementById("fstp").style.color = "black";
+
+		function change(){
+			var tP = document.getElementById("fstp");
+			tP.style.color = "green";
+			tP.style.fontSize = "30px";
+			tP.style.margin = "30px";
+		}
+	</script>
+
+	<style>
+		.box{width: 200px;position: relative;transition:0.3s;}
+		.box img{width: 100%;}
+	</style>
+
+	<div class="box">
+		<img src="../images/testimg.jpg" alt="">
+	</div>
+
+	<button onclick="move(100)"> +100 </button>
+	<button onclick="move(1000)"> +1000 </button>
+	<button onclick="move(0)"> 0 </button>
+	<button class="box1" onclick="bodyColor('#f00')">빨강</button>
+	<button class="box1" onclick="bodyColor('#00f')">파랑</button>
+	<button class="box1" onclick="bodyColor('#fff')">복구</button>
+
+
+	<style>
+		.box1{width: 100px;height: 25px;border: 1px solid #000;border-radius:10px;text-align: center;line-height: 25px;background: white;}
+		.box1:hover{background: skyblue;}
+	</style>
+
+	<script>
+		function move0(){
+			var box = document.getElementsByClassName("box")[0];
+			box.style.left = "0";
+		} 
+		function move100(){
+			var box = document.getElementsByClassName("box")[0];
+			box.style.left = "100px";
+		}
+		function move(left){
+			var box = document.getElementsByClassName("box")[0];
+			box.style.left = left + "px";
+		}
+
+		function bodyColor(color){
+			var bc = document.getElementsByTagName("body")[0];
+			bc.style.backgroundColor = color;
+		}
+	</script>
+	<br>
+
+	백그라운드 이미지 바꾸기
+
+	<br>
+
+	<div class="imgc">
+		<img src="../images/img1.jpg" alt="" class="imgc2">
+	</div>
+
+	<button class="imgc" onclick="imgc('../images/img2.jpg')">이미지변경1</button>
+	<button class="imgc" onclick="imgc('../images/img3.jpg')">이미지변경2</button>
+	<button class="imgc" onclick="imgc('../images/img4.jpg')">이미지변경3</button>
+
+	<script>
+		function imgc(chg){
+			var ig = document.getElementsByClassName("imgc")[0];
+			ig.style.chg = chg;
+		}
+	</script>
+
+
+	
+</body>
+</html>

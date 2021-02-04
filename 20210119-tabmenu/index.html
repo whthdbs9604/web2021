@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tabmenu</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+
+	<style>
+		.tabwrap{width:1000px;margin:0 auto;}
+		.tab li{float: left; width: 200px;text-align: center;line-height:40px;cursor: pointer;}
+		.boxwrap div{border: 1px solid #000; padding: 20px;display: none;}
+		.tab li.active{background: skyblue;}
+	</style>
+
+	<script>
+		$(document).ready(function(){
+			$(".boxwrap>div").eq(0).fadeIn();
+
+			$(".tabwrap>ul>li").click(function(){
+
+				var num = $(this).index();
+				console.log(num);
+
+				$(".tabwrap>ul>li").removeClass();
+				$(this).addClass("active");
+
+				$(".boxwrap>div").hide();
+				$(".boxwrap>div").eq(num).fadeIn();
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<div class="tabwrap">
+		<ul class="tab clearfix">
+			<li class="active">menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+		</ul>
+		<div class="boxwrap">
+			<div>1.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error quibusdam delectus tempore, quo laboriosam animi accusamus sequi maiores nostrum, ea? Expedita fuga quod eveniet voluptatum error id quos tempora rerum.</div>
+			<div>2.Harum, impedit? Recusandae quod odit incidunt quia doloribus sapiente fugiat. Soluta, amet doloribus ad nisi qui beatae sunt saepe. Labore facilis cum saepe maxime ut, perspiciatis suscipit animi temporibus ullam!</div>
+			<div>3.Asperiores dolorem cumque excepturi? Ipsa asperiores dignissimos maxime explicabo magnam voluptas minima autem animi nobis ex dolorem illum hic, est quidem, cupiditate assumenda suscipit atque saepe reiciendis, eum doloremque voluptate.</div>
+			<div>4.Obcaecati iure dolorem at voluptates error ipsa distinctio sunt, ipsum reiciendis unde atque reprehenderit dignissimos debitis, voluptatibus repudiandae a pariatur culpa eaque. Facilis, quia! Consequatur, expedita. Consectetur necessitatibus, voluptas odit?</div>
+			<div>5.Eius facilis inventore impedit quae nihil assumenda, quisquam, eveniet ratione aperiam alias omnis delectus dicta natus mollitia ullam deleniti quas consequatur cum saepe atque, obcaecati eos iusto animi quo? Reiciendis.</div>
+		</div>
+	</div>
+</body>
+</html>

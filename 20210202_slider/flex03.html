@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>flex</title>
+	<link rel="stylesheet" href="../bxslider/css/reset.css">
+
+	<style>
+		.visual{background-image: url(../images/pc01.jpg); height: 600px;background-repeat: no-repeat;background-position: center;background-size: cover; display:flex;justify-content:center;}
+		.container{width: 1000px;display:flex;justify-content:space-between;flex-direction:column;}
+		.container .viewtxt{flex-grow:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-end;color: white;}
+		.container .viewtxt h2{width: 350px;}
+		.container .viewtxt p{width: 350px; text-align: left;}
+		.banopt{height: 130px;display:flex;}
+		.banopt .banner{background: orange;padding: 20px;flex:1;color: white;}
+		.banopt .banner .txt{margin-bottom: 10px;}
+
+		@media screen and (max-width:760px){
+			.container .viewtxt{align-items: center;font-size:1.5em;text-align: center;}
+			.banopt{flex-direction:column;height:auto;}
+			.banopt .banner{padding: 10px;margin-bottom: 2px;}
+			.banopt .banner:last-child{margin-bottom:0;}
+			.banopt .banner a{display:none;}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="visual">
+		<div class="container">
+			<div class="viewtxt">
+				<h2>Lorem, ipsum dolor.</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Minus, eveniet!</p>
+			</div>
+			<div class="banopt">
+				<div class="banner">
+					<div class="txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, accusantium.</div>
+					<a href="#">more</a>
+				</div>
+				<div class="banner">
+					<div class="txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, accusantium.</div>
+					<a href="#">more</a>
+				</div>
+				<div class="banner">
+					<div class="txt">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti, accusantium.</div>
+					<a href="#">more</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

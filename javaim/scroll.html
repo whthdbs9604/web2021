@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>scroll menu</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.1.1.min.js"></script>
+	<script src="../js/jquery.mousewheel.min.js"></script>
+
+	<style>
+		nav.menu{width: 100%; margin: 0 auto;background: skyblue;}
+		nav.menu.fixed{position: fixed;}
+		nav.menu ul{width: 1000px;margin: 0 auto;}
+		nav.menu li{float: left; width: 20%;}
+		nav.menu li a{display: block;line-height: 40px;text-align: center;}
+		.content{height: 3000px;}
+	</style>
+
+	<script>
+		$(function(){
+			$(document).mousewheel(function(event,delta){
+				console.log(delta);
+				$(window).scroll(function(){
+					var scrollY = $(window).scrollTop();
+					if(scrollY > 200){
+						if(delta>0){
+							$(".menu").addClass("fixed");
+						}else{
+							$(".menu").removeClass("fixed");
+						}
+					}else{
+						$(".menu").removeClass("fixed");
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<nav class="menu">
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</nav>
+		<div class="content">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eos ducimus voluptatem tenetur exercitationem deserunt, consectetur, officiis voluptas ex hic! Praesentium minima facere hic totam, fugit maiores ab voluptatum rerum ea illum. Error, commodi sunt repellendus ex dolor, sit magni dolore eaque aperiam officia quaerat exercitationem minima, non? Non facere necessitatibus quas, fuga? Doloremque et accusantium voluptatum omnis explicabo nostrum natus maiores culpa unde consequatur ex, suscipit molestiae fuga soluta odit, corrupti voluptatem mollitia repellat sapiente? Nulla autem in reiciendis unde, dignissimos magnam sit, quod id aspernatur at, consectetur veritatis illo quas aut ratione. Eveniet iusto rem aut iste. In.
+		</div>
+	</div>
+</body>
+</html>

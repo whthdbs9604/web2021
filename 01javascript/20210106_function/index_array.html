@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>array</title>
+</head>
+<body>
+	<div id="han"></div>
+	<script>
+		var city = ["seoul","busan","incheon","suwon"];
+
+		function printArr(){
+		for(var i=0;i<city.length;i++){
+			// document.write(i)
+			document.write("배열 데이터 [" + i+ "] " + city[i] + "<br>" );
+			// txt += "배열 데이터 [" + i+ "] " + city[i] + "<br>";
+			console.log(txt);
+
+
+			//document.getElementById("han").innerHTML = txt;
+
+			}
+		}
+		// printArr();
+	</script>
+
+	<div onclick="printArr()">데이터 출력</div>
+</body>
+</html>
