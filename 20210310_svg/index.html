@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+body{background: skyblue;}
+.svg{width: 200px;height: 200px;background-image: url(star.svg);}
+.st0{fill:#FFFF00;}
+.star1{width: 200px;height: 200px; background: blue;}
+.star1:hover .st0{fill:#00ff00;transition:0.3s;}
+.star1 path{fill:#f0f;stroke:#f0f;stroke-width:20;stroke-dasharray:571; stroke-dashoffset:500;}
+
+.circle circle{stroke:#000;fill:#f0f;stroke-width:5;stroke-dasharray:580; stroke-dashoffset:580;
+  animation-fill-mode:forwards;
+  animation-duration:3s;
+  animation-direction:alternate;}
+
+.circle{width: 300px;height: 300px;}
+.circle:hover circle{animation-name:ani;}
+
+@keyframes ani {
+  from{stroke-dashoffset:580} to{stroke-dashoffset:0}
+
+}
+  </style>
+
+</head>
+<body>
+
+  <img src="star.svg" alt="">
+  <div class="svg"></div>
+
+  <div class="star1">
+    <svg x="0" y="0" width="500" height="500" viewBox="0 0 500 500">
+    <g>
+    	<polygon class="st0" points="89.9,141.9 43.5,166.2 52.4,114.6 14.9,78 66.7,70.5 89.9,23.5 113.1,70.5 164.9,78 127.4,114.6
+    		136.2,166.2 	"/>
+    	<path d="M89.9,24.7l22.6,45.8l0.2,0.5l0.5,0.1l50.6,7.3l-36.6,35.7l-0.4,0.4l0.1,0.5l8.6,50.4l-45.2-23.8l-0.5-0.2l-0.5,0.2
+    		l-45.2,23.8l8.6-50.4l0.1-0.5l-0.4-0.4L15.9,78.4L66.5,71L67,71l0.2-0.5L89.9,24.7 M89.9,22.4L66.4,70.1l-52.6,7.6l38,37.1l-9,52.4
+    		l47-24.7l47,24.7l-9-52.4l38-37.1l-52.6-7.6L89.9,22.4L89.9,22.4z"/>
+    </g>
+    </svg>
+
+  </div>
+
+  <div class="circle">
+    <svg x="0" y="0" width="100%" height="100%" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="45"></circle>
+    </svg>
+  </div>
+
+</body>
+</html>
