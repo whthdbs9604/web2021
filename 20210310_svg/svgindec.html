@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../js/jquery-3.1.1.min.js"></script>
+
+
+
+  <style type="text/css">
+    .st0{fill:none;stroke:#1B75BC;stroke-miterlimit:10; stroke-dasharray:872;stroke-dashoffset:872;}
+    @keyframes linani{
+      from{stroke-dashoffset:872;}
+      to{stroke-dashoffset:0}
+    }
+    .linewrap{height: 700px;}
+    .linewrap.animate path{animation: linani 3s forwards;}
+    .st1{fill:none;stroke:#3F73B5;stroke-miterlimit:10;animation-delay:0.2s}
+    .st2{fill:none;stroke:#5471AF;stroke-miterlimit:10;animation-delay:0.4s}
+    .st3{fill:none;stroke:#656FA9;stroke-miterlimit:10;animation-delay:0.6s}
+    .st4{fill:none;stroke:#736DA4;stroke-miterlimit:10;animation-delay:0.8s}
+    .st5{fill:none;stroke:#806A9F;stroke-miterlimit:10;animation-delay:1s}
+    .st6{fill:none;stroke:#8C6899;stroke-miterlimit:10;animation-delay:1.2s}
+    .st7{fill:none;stroke:#976594;stroke-miterlimit:10;animation-delay:1.4s}
+    .st8{fill:none;stroke:#A2618F;stroke-miterlimit:10;animation-delay:1.6s}
+    .st10{fill:none;stroke:#B85884;stroke-miterlimit:10;animation-delay:1.8s}
+    .st11{fill:none;stroke:#C2537F;stroke-miterlimit:10;animation-delay:2.0s}
+    .st12{fill:none;stroke:#CC4D79;stroke-miterlimit:10;animation-delay:2.2s}
+    .st13{fill:none;stroke:#D64674;stroke-miterlimit:10;animation-delay:2.4s}
+    .st14{fill:none;stroke:#E03F6F;stroke-miterlimit:10;animation-delay:2.6s}
+    .st15{fill:none;stroke:#EA356A;stroke-miterlimit:10;animation-delay:2.8s}
+  </style>
+</head>
+<body>
+  <div style="height:1000px;width:1000px; background:skyblue;"></div>
+  <div class="linewrap">
+    <svg  x="0px" y="0px" viewBox="0 0 510.9 545.3">
+    <g>
+      <path class="st0" d="M6.6,36.8c0,0-50.7,291.4,215,244.3s282.1,237.9,282.1,237.9"/>
+      <path class="st1" d="M15.3,35.1c0,0-35.4,279.9,205,249.2s268,236.2,268,236.2"/>
+      <path class="st2" d="M24.1,33.5c0,0-20,268.4,195.1,254.1S473,522.2,473,522.2"/>
+      <path class="st3" d="M32.8,31.9c0,0-4.7,256.9,185.1,259s239.7,233,239.7,233"/>
+      <path class="st4" d="M41.5,30.2c0,0,10.6,245.3,175.2,263.9s225.6,231.4,225.6,231.4"/>
+      <path class="st5" d="M50.3,28.6c0,0,26,233.8,165.2,268.8s211.4,229.8,211.4,229.8"/>
+      <path class="st6" d="M59,26.9c0,0,41.3,222.3,155.3,273.7s197.3,228.1,197.3,228.1"/>
+      <path class="st7" d="M67.7,25.3c0,0,56.6,210.8,145.3,278.6s183.1,226.5,183.1,226.5"/>
+      <path class="st8" d="M76.5,23.6c0,0,72,199.2,135.4,283.5s169,224.9,169,224.9"/>
+
+      <path class="st10" d="M93.9,20.4c0,0,102.6,176.2,115.5,293.3c12.9,117.1,140.7,221.7,140.7,221.7"/>
+      <path class="st11" d="M102.7,18.7c0,0,118,164.7,105.5,298.2s126.6,220,126.6,220"/>
+      <path class="st12" d="M111.4,17.1c0,0,133.3,153.1,95.6,303.1s112.4,218.4,112.4,218.4"/>
+      <path class="st13" d="M120.1,15.4c0,0,148.6,141.6,85.6,308S304,540.3,304,540.3"/>
+      <path class="st14" d="M128.9,13.8c0,0,164,130.1,75.7,313s84.1,215.2,84.1,215.2"/>
+      <path class="st15" d="M137.6,12.1c0,0,179.3,118.6,65.7,317.9s70,213.6,70,213.6"/>
+    </g>
+    </svg>
+  </div>
+
+  <script>
+  $(window).scroll(function(){
+    var sTop = $(window).scrollTop();
+    console.log(sTop)
+    if(sTop > 800){
+      $(".linewrap").addClass("animate");
+    }else{
+      $(".linewrap").removeClass("animate");
+    }
+  });
+  </script>
+</body>
+</html>
